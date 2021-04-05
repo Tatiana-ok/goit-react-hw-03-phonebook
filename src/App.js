@@ -6,6 +6,7 @@ import contacts from './contacts.json';
 import ContactForm from './components/ContactForm/ContactForm';
 import ContactList from './components/ContactList/ContactList';
 import Filter from './components/Filter/Filter';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   state = {
@@ -85,5 +86,10 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  contacts: PropTypes.array,
+  filter: PropTypes.string,
+};
 
 export default App;
